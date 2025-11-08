@@ -1,0 +1,42 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --watchAll",
+    "test:unit": "jest tests/unit --runInBand",
+    "test:integration": "jest tests/integration",
+    "setup-test-db": "node src/setupTestDB.js",
+    "coverage": "jest --coverage --coverageDirectory=coverage/server --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "mongoose": "^8.19.3",
+    "morgan": "^1.10.1",
+    "winston": "^3.18.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "babel-jest": "^30.2.0",
+    "jest": "^30.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb-memory-server": "^10.3.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
+  }
+}
